@@ -1,6 +1,6 @@
 function makanTerusRekursif(waktu) {
     // you can only write your code here!
-    if(waktu<0 || waktu===0 )
+    if(waktu<=0  )
         return 0;
     else{
         return makanTerusRekursif(waktu-15)+1;
