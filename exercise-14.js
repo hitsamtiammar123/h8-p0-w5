@@ -5,10 +5,10 @@ function changeVocals (str) {
 
     for(let i=0;i<str.length;i++){
       let c=str.charCodeAt(i);
-        if(hurufVokal.indexOf(str[i].toLowerCase())!==-1){
-          if((c>=65 && c<=90) || (c>=97 && c<=122))
-              c=c+1;
-        }
+      if(hurufVokal.indexOf(str[i].toLowerCase())!==-1){
+        if((c>=65 && c<=90) || (c>=97 && c<=122))
+          c=c+1;
+      }
         newStr+=String.fromCharCode(c);
     }
     return newStr;
@@ -45,8 +45,6 @@ function changeVocals (str) {
     //code di sini
     if(name.length<5)
         return 'Minimal karakter yang diinputkan adalah 5 karakter';
-    
-    var listFunc=[]
         
     var newVocal=changeVocals(name);
     var reverseStr=reverseWord(newVocal);
@@ -63,4 +61,3 @@ function changeVocals (str) {
   console.log(passwordGenerator('Dimitri Wahyudiputra')); // 'BRTVPJDVYHBwJRTJMJd'
   console.log(passwordGenerator('Alexei')); // 'JFXFLb'
   console.log(passwordGenerator('Alex')); // 'Minimal karakter yang diinputkan adalah 5 karakter'
-  console.log(passwordGenerator('abcde'));
